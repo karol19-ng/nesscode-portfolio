@@ -41,3 +41,11 @@ body[data-career="security"] .window-bar i:nth-child(2){background:#42a4dc}
 body[data-career="security"] .art-button{background:#42a4dc;color:#07131c}
 body[data-career="security"] .grid-bars i{background:#c3e3f5}
 @media(max-width:650px){.career-switch{margin-bottom:16px}.career-tab{min-height:36px;padding-inline:12px}.career-summary{margin-top:-10px;font-size:8px}.brand-mark{width:33px;height:33px}}
+.projects-security{display:none}
+body[data-career="security"] .projects-programming{display:none}
+body[data-career="security"] .projects-security{display:block}
+.security-learning{display:none}
+body[data-career="security"] .security-learning{display:contents}
+body[data-career="security"] .projects-security .projects-intro{max-width:900px;min-height:220px;align-items:center;margin-bottom:0;padding:32px 0}
+body[data-career="security"] .projects-security .projects-intro h2{font-size:clamp(42px,5vw,68px)}
+body[data-career="security"] .projects-security .projects-intro p{max-width:300px}

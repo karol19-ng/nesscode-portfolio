@@ -10,8 +10,8 @@ const careerCopy = {
     summary: "Aplicaciones web, .NET y bases de datos.",
   },
   security: {
-    label: "CIBERSEGURIDAD · ANÁLISIS JUNIOR",
-    summary: "Aprendizaje en análisis junior, redes y protección digital.",
+    label: "CIBERSEGURIDAD · EN FORMACIÓN",
+    summary: "Estoy ampliando mis conocimientos de redes y seguridad informática.",
   },
 };
 careerChoices.forEach((choice) => choice.addEventListener("click", () => {
