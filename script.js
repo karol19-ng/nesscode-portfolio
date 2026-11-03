@@ -1,6 +1,29 @@
 const year = document.querySelector("#year");
 if (year) year.textContent = new Date().getFullYear();
 
+const careerChoices = document.querySelectorAll("[data-career-choice]");
+const careerLabel = document.querySelector("#career-label");
+const careerSummary = document.querySelector("#career-summary");
+const careerCopy = {
+  programming: {
+    label: "DESARROLLO DE SOFTWARE · .NET",
+    summary: "Aplicaciones web, .NET y bases de datos.",
+  },
+  security: {
+    label: "CIBERSEGURIDAD · ANÁLISIS JUNIOR",
+    summary: "Aprendizaje en análisis junior, redes y protección digital.",
+  },
+};
+careerChoices.forEach((choice) => choice.addEventListener("click", () => {
+  const focus = choice.dataset.careerChoice;
+  const copy = careerCopy[focus];
+  if (!copy) return;
+  document.body.dataset.career = focus;
+  careerChoices.forEach((tab) => tab.setAttribute("aria-pressed", String(tab === choice)));
+  if (careerLabel) careerLabel.textContent = copy.label;
+  if (careerSummary) careerSummary.textContent = copy.summary;
+}));
+
 const menuButton = document.querySelector(".menu-toggle");
 const nav = document.querySelector("#main-nav");
 menuButton?.addEventListener("click", () => {
